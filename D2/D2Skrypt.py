@@ -2,12 +2,14 @@
 import random
 # dzień 2
 #słownik nawiasy{}
+'''
 literki = {'a' : 'A', 'b' : 'B','c' : 'C','d' : 'D'}
 print(literki)
 print(len(literki))
 print (literki["a"], literki["b"])
 literki['c'] = "napis"
 print(literki['c'])
+'''
 """
 #dopisz d usuń c
 literki["d"]="D"
@@ -59,6 +61,7 @@ print(kształty & kształty2)
 print(kształty ^ kształty2)
 '''
 # P 49 zwraca 6 losowych liczb od 1 do 49 + import random (ciągi losowe)
+'''
 los1 = random.randint(1,49)
 los2 = random.randint(1,49)
 los3 = random.randint(1,49)
@@ -78,6 +81,8 @@ s.add(random.randint(1,49))
 s.add(random.randint(1,49))
 L=list(s)
 print(L[:6])
+
+'''
 """
 # instrukcja warunkowa if
 a=int(input('podaj liczbę: '))
@@ -173,6 +178,7 @@ while(i<= len(lista)-1):
 print ("poza linią")"""
 
 #pętla po parzystych
+"""
 lista = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
 i=0
 while(i<= len(lista)-1):
@@ -195,3 +201,118 @@ print ("poza linią")
 a=14
 b=12
 print("a jest większe niż b o:"+ str(a-b)) if (a>=b) else print("b jest większe niż a od b o:"+str(b-a))
+"""
+
+# NIC NIE WYCHODZI :-(
+'''
+lista = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for var in lista:
+    print("wartość: "str(var))
+    lista.append(15)
+for index, var in enumerate(lista):
+    print("Index: "+ str(index)+" \twartość" +str(var))
+'''
+#  
+'''
+s1= range(100)
+print(s1)
+for i in s1:
+    print(i)
+for j in range(15,25):
+    print(j)
+for k in range (0,50,2):
+    print(k)
+    
+# kwadraty liczb parzystych
+for k in range (0,50,2):
+    print(k, k**2)
+# odległośći w ciągach
+for k in range (0,50,2):
+    print("wynik uporządkowany: %4i%6i%8i" % (k, k**2, k**3))
+# odległości w ułamkach
+
+for l in range(0,10):   
+    print("Pierwiastkiem liczby %2i jest %5.3f" % (1,1**0.7)) 
+
+# P57 zamówienie i produkty -NICZEGO NIE MA
+'''
+"""
+zamówienie = input("wybierz towar")
+zamówienie_ilość = int(input("Podaj ilość zamawianego produktu"))
+sklep_produkty= {"monitor 16": 1, "klawiatura":2, "mysz":3}
+produkty_cena={1:1500, 2:400, 3:200}
+produkty_dostępność = {1:5, 2:5, 3:15}
+for k in sklep_produkty:
+    if(zamówienie == k and produkty_dostępność[sklep_produkty[k]]>= zamówienie_ilość):
+        print("produkt dostępny: "+ k)
+        print("zamawiasz: " + str(zamówienie_ilość) + "szt")
+    elif(zamówienie == k and produkty_dostępność[sklep_produkty[k]]< zamówienie_ilość):
+        print("produkt dostępny: "+ k)
+        print("jest dostępne tylko: " + str(produkty_dostępność[sklep_produkty[k]]) + "szt")
+    else:
+        print("produkt niedostępny")
+#
+"""
+    
+#P57
+'''
+zamówienie = input("wybierz towar")
+zamówienie_ilość = int(input("Podaj ilość zamawianego produktu"))
+sklep_produkty= {"monitor": 1, "klawiatura":2, "mysz":3}
+produkty_cena={1:1500, 2:400, 3:200}
+produkty_dostępność = {1:5, 2:5, 3:15}
+for k in sklep_produkty:
+    if(zamówienie == k and produkty_dostępność[sklep_produkty[k]]>= zamówienie_ilość):
+        print("produkt dostępny: "+ k)
+        print("zamawiasz: " + str(zamówienie_ilość) + "szt")
+    elif(zamówienie == k and produkty_dostępność[sklep_produkty[k]]< zamówienie_ilość):
+            print("produkt dostępny: "+ k)
+            print("jest dostępne tylko: " + str(produkty_dostępność[sklep_produkty[k]]) + "szt")    
+'''
+#P58 kilka zamówień??????????????????????????????????????
+"""zamówienie = input("wybierz towar")
+zamówienie_ilość = int(input("Podaj ilość zamawianego produktu"))
+sklep_produkty= {"monitor": 1, "klawiatura":2, "mysz":3}
+produkty_cena={1:1500, 2:400, 3:200}
+produkty_dostępność = {1:5, 2:5, 3:15}
+
+while produkty_dostępność[sklep_produkty[k]]>= zamówienie_ilość:
+    for k in sklep_produkty:
+        if(zamówienie == k and produkty_dostępność[sklep_produkty[k]]>= zamówienie_ilość):
+            print("produkt dostępny: "+ k)
+            print("zamawiasz: " + str(zamówienie_ilość) + "szt")
+else:
+    print("produkt niedostępny: "+ k)
+    brake
+"""         
+# konwertujemy cyfry na słowa
+'''
+slownie = {'1': "jeden", '2': "dwa", '3':"trzy", "4":"cztery", "5":"pięć", "6":"sześć", "7":"siedem", "8":"osiem", "9":"dziewieć"}
+i="t"
+res=[]
+while (i == "t"):
+    dig = input("wprowadz liczbę (1-9): ")
+    if(dig.isdigit()):
+        res.append(slownie[dig])
+    else:
+        print("podana wartość nie jest cyfrą")
+    i = input("czy chcesz wprowadzać dalej? (t/n) ")
+print (i,end='')
+print (res)
+ '''   
+# tabliczka mnożenia 5 na 5
+line = range(1,6)
+n = 1
+
+while(n<=5):
+    print(str(n)+ "|", end="")
+    print("%3i%3i%3i%3i%3i" % (n*line[0], n*line[1], n*line[2], n*line[3], n*line[4]))
+    n+=1
+# wyświetl kwadraty liczb nieparzystych od 9 do 1
+line= range (1,10,2)
+
+np = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
+i=len(np) -1
+while(i==0 len(np)-1):
+    print(str(i)+", "+str(lista[i]))
+    i-=1
