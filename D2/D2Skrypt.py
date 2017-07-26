@@ -286,7 +286,7 @@ else:
     brake
 """         
 # konwertujemy cyfry na słowa
-'''
+"""
 slownie = {'1': "jeden", '2': "dwa", '3':"trzy", "4":"cztery", "5":"pięć", "6":"sześć", "7":"siedem", "8":"osiem", "9":"dziewieć"}
 i="t"
 res=[]
@@ -299,7 +299,8 @@ while (i == "t"):
     i = input("czy chcesz wprowadzać dalej? (t/n) ")
 print (i,end='')
 print (res)
- '''   
+"""
+"""
 # tabliczka mnożenia 5 na 5
 line = range(1,6)
 n = 1
@@ -316,3 +317,110 @@ i=len(np) -1
 while(i==0 len(np)-1):
     print(str(i)+", "+str(lista[i]))
     i-=1
+"""
+'''
+# X do potęgi y 
+x= int(input("podaj liczbę x: "))
+y= int(input("podaj liczbę y: "))
+i=1
+res=1
+while(i <= y):
+    res*=x
+    i = i+1
+print(res)
+
+# suma ciągu geometrycznego i wartość elementu itego (S to wynik) a*q^n
+
+n =int(input("podaj n: "))
+a1 =float(input("podaj a1: "))
+q=float(input("podaj q :"))
+l=[]            
+i=0
+S=0
+while(i<n):
+    S+=a1*(q**i)
+    l.append(a1*(q**i))
+    i+=1
+#2f miejsca po przecinku (-) to wyjustowanie do lewej s=string i= int f=float
+#end="" znak zakoczenia procedury
+
+#  %15.2f to 12miejsc , 2 po 
+
+print ("%10s %15.2f" % ("Suma: ",S))
+print ("%10s %10s" % ("składowe: ",""), end="" )
+#print (a1 *(q**(n-1)))
+for v in l:
+    print ("%5.2f" % (v), end=" ")
+# przez listę zwraca indeksy i oraz wartości v
+
+
+
+#ile razy i na której pozycji występuje w ciągu litera ciąg wprowadzany przez użytkownika
+txt=input ("podaj napis: ")
+szukaj = input("szukaj znaku: ")
+i=0
+licznik=0
+while (i<=len(txt)-1):
+    if (txt [i]== szukaj):
+        print ("znaleziono", szukaj, "na pozycji", i+1)
+        licznik+=1
+    i +=1
+print ("podaną frazę znaleziono: ",licznik ," razy")
+
+#ile razy i na której pozycji występuje w ciągu inny literowy ciąg wprowadzany przez użytkownika
+txt=input ("podaj napis: ")
+szukaj = input("szukaj znaki: ")
+ilosc= len(txt) - len(szukaj) +1
+licznik=0
+i=0
+while (i < len(txt)):
+    tab = txt [i:i+len (szukaj)]
+    print(tab)
+    if (tab == szukaj):
+        print ("znaleziono", szukaj, "na pozycji", i+1)
+        licznik+=1
+    i +=1
+print ("podaną frazę znaleziono: ",licznik ," razy")
+
+#
+#ile razy i na której pozycji występuje w ciągu inny literowy ciąg wprowadzany przez użytkownika w trzech znakach ma 2 znaki znajdować raz (nie ma zliczać 2 razy)
+txt=input ("podaj napis: ")
+szukaj = input("szukaj znaki: ")
+ilosc= len(txt) - len(szukaj) +1
+licznik=0
+i=0
+while (i < len(txt)):
+    tab = txt [i:i+len (szukaj)]
+    print(tab)
+    if (tab == szukaj):
+        print ("znaleziono", szukaj, "na pozycji", i+1)
+        licznik+=1
+        i=i +len(szukaj)
+    else:
+        i +=1
+print ("podaną frazę znaleziono: ",licznik ," razy")
+
+#Przelicz F na celciusze F=(C+1.8)+32 co 5 stopni
+#Far=(C+1.8)+32
+C=range(-20, 40, 5)
+i= len(C)-1
+print("%5s  |  %5s" % ("C", "F"))
+while(i >= 0):
+    print("%5i  |  %5.1f" % (C[i], (C[i]*1.8)+32))
+    i = i- 1
+'''
+#Przelicz F na celciusze F=(C+1.8)+32 oraz + przy dodatnich a nie przy zerze, użytkownik sam wpisuje wartości
+start = int(input("start: "))
+stop = int(input("stop: "))
+step = int(input("step: "))
+C=range(start, stop+step, + step)
+i= len(C)-1
+print("--------------")
+print("%5s  |  %5s" % ("C", "F"))
+print("--------------")
+while(i >= 0):
+    if(C[i] == 0):
+        print("%5i  |  %5.1f" % (C[i], (C[i]*1.8)+32))
+    else: 
+        print("%+5i  |  %+5.1f" % (C[i], (C[i]*1.8)+32))
+    i = i- 1
